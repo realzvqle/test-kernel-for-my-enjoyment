@@ -40,8 +40,9 @@ VOID KiMain(VOID) {
     struct limine_framebuffer* framebuffer = framebuffer_request.response->framebuffers[0];
     KiStartFrameBuffer(framebuffer);
 
-    KiDrawCharacter('A', 10, 10, 10, 0x4cff33);
-    
-
+    //KiDrawCharacter('Z', 10, 10, 10, 0x4cff33);
+    KiDrawString("I LOVE EVERYONE", 10, 10, 1, 0x4cff33);
+    KiDrawString("EXCEPT KANYE HE SUCKS ASS", 10, 20, 1, 0x00f9ff);
+    KiDrawString("EVERYONE ELSE IS COOL", 10, 30, 1, 0xff5a00);
     hcf();
 }
