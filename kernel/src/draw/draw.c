@@ -9,6 +9,7 @@ VOID KiStartFrameBuffer(struct limine_framebuffer* framebuffer){
     s_FrameBufferPointer = framebuffer->address;
     s_FrameBufferPitch = framebuffer->pitch;
 }
+
 VOID KiDrawPixel(UINT16 x, UINT16 y, UINT64 color){
     s_FrameBufferPointer[y * (s_FrameBufferPitch / 4) + x] = color;
 }
